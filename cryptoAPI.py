@@ -1,4 +1,4 @@
-from Base import BaseMinerApi
+from _base import BaseMinerApi
 from pprint import pprint
 
 PARAM_FROM_CURRENCY = 'fsym'
