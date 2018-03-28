@@ -1,5 +1,4 @@
 from _base import BaseMinerApi
-from pprint import pprint
 
 PARAM_FROM_CURRENCY = 'fsym'
 PARAM_TO_CURRENCY = 'tsym'
@@ -72,8 +71,8 @@ class ApiCallResult:
         import json
         with open(path, mode = mode) as f:
             f.write(str(json.dumps(self.api_call_json, indent=1)))
-            
-        
+    
+
 
 class RealtimeAPI(BaseMinerApi):
     pass
