@@ -59,10 +59,12 @@ class ApiCallResult:
     def __init__(self,api_call_json):
         self.api_call_json = api_call_json
         
+        
     def to_pandas(self, human_date = True, format = None):
         import pandas as pd
         
-        df = pd.DataFrame(self.api_call_json['Data'])
+        df = pd.DataFrame(self.api_call_json['Data'],
+                          columns = ['time','open','close', 'low', 'high', 'volumefrom', 'volumeto'])
         if human_date:
             df['time'] = pd.to_datetime(df['time'],unit = 's') 
         return df
